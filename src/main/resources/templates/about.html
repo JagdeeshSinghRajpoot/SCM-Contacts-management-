@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>this ia about page</h1>
+  <!-- using fragment -->
+  <div th:replace="${isLogin} ? ~{head :: footer(~{::section})} : ~{head :: test(~{::#not_logged_in})}">
+  <!-- <div th:insert="~{head :: footer(~{::section})}"> -->
+    <section>
+      <h1>User is logged in</h1>
+      <h2>Dynamic Content</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Molestiae velit dolor omnis facere! Possimus officiis ea,
+          numquam nihil itaque aspernatur!</p>
+      <button>Click on Dyanaic Content</button>
+    </section>
+
+    <section id="not_logged_in">
+      <h1>User is not logged in</h1>
+    </section>
+  </div>
+
+</body>
+
+</html>
