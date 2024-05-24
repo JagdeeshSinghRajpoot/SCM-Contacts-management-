@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+ <title>Services</title>
 </head>
 <body>
-  <h1>This is services page</h1>
-  <div th:replace="~{head :: footer(~{:: .third_content})}">
-  <section id="main_content">
-    <h1>this si dyanmic service</h1>
-  </section>
-
-  <section id="second_content">
-    <h1>this is second content</h1>
-  </section>
-
-  <section class="third_content">
-    <h1>This is third content</h1>
-  </section>
-
-</div>
+  <div id="content">
+    <h1>Welcome to service page</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, minima.</p>
+  </div>
+  <script>
+    console.log("this is service page");
+  </script>
 </body>
 </html>

@@ -1,50 +1,18 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{::script})}">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Document</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" data-th-href="@{'.\css\output.css'}" />
-
-
+ 
+ <title>Home</title>
 </head>
-
 <body>
-  <div class="bg-gray-200 w-1/2 p-4 flex flex-col items-center space-y-3 mx-auto  ">
-
-    <h1 data-th-text="${Name}" class="text-2xl font-bold">
-      Welcome to home page
-    </h1>
-
-    <p class="text-xl text-gray-700">
-      Youtube Channel : <span th:text="${YoutubeChannel}"></span>
-    </p>
-
-
-    <p class="text-2xl">Github Repo Link : <span th:text="${Github}"></span></p>
-
-    <a data-th-href="${Github}">Click here to open</a>
-
-    <p class="text-gray-600">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti amet nam itaque obcaecati,
-      quas expedita fuga consequuntur id repudiandae quidem harum omnis consequatur unde incidunt velit
-      laudantium quos vel soluta blanditiis tempore dolores et minus. Dignissimos quos eos ea iste reiciendis
-      fuga rem ab, magni voluptatibus culpa. Nobis rerum commodi porro, dolor veritatis unde fuga aliquam obcaecati
-      aut officia modi reiciendis! Expedita, eos quos. Soluta animi sit laborum hic esse accusamus pariatur debitis vero
-      laudantium! Modi, deleniti? Voluptatibus voluptatem laudantium distinctio earum unde magnam sint facilis officiis
-      obcaecati
-      libero quam natus nisi provident, et eligendi perferendis minus accusantium, consequuntur nihil.
-    </p>
-
-    <div>
-      <button class="px-3 py-3 rounded bg-blue-700 text-white hover:bg-blue-600">Click Here</butto>
-    </div>
+  <div id="content">
+    <h1 class="text-rose-500">Welcome to home page</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, cupiditate?</p>
   </div>
 
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script>
+    console.log("home page");
+  </script>
+  <script>console.log("this page is home page")</script>
 </body>
-
 </html>
